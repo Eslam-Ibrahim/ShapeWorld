@@ -14,7 +14,6 @@ public class Square : Rectangle {
         _edgeLenght = value;
       }
     }
-
       public override int Width{
       get{
         return _edgeLenght;
