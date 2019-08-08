@@ -20,6 +20,7 @@ namespace ShapeWorld.Client
             Console.WriteLine(c.Volume());
             ShapeArray sharr = new ShapeArray();
             sharr.MyDictionary();
+            sharr.MyList();
         }
     }
 }

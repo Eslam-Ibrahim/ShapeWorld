@@ -27,9 +27,30 @@ namespace ShapeWorld.Domain.Collections
 
       public void MyList(){
         List <Shape> shaped = new List<Shape>();
+        shaped.Add(new Circle(1.2));
+        shaped.Add(new Cube(4,12));
         System.Console.WriteLine(shaped.Find(e=>e.NumberOfEdges == 4)); // predicate function
         System.Console.WriteLine(shaped.FirstOrDefault(e=>e.NumberOfEdges == 4)); // predicate function
         // Find vs FirstOrDefault ??!
+
+        /* Exception Handeling */
+        try{
+          shaped [100] = new Rectangle(1,2);
+        }
+        catch(NullReferenceException){
+          throw;
+        }
+        catch (ArgumentOutOfRangeException){
+        shaped.Add(new Rectangle(1,3));
+        Console.WriteLine(shaped.IndexOf(shaped.Last()));
+        }
+        catch(Exception ex){
+          throw new Exception("Context...",ex);
+        }
+        finally{
+          GC.Collect();
+          Console.WriteLine("final");
+        }
       }
 
       public void MyDictionary(){
@@ -39,5 +60,7 @@ namespace ShapeWorld.Domain.Collections
         Console.WriteLine(guid);
         Console.WriteLine(shaped[guid].Preimeter());
       }
+      
+      
     }
 }

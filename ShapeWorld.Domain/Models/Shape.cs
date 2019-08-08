@@ -14,6 +14,9 @@ namespace ShapeWorld.Domain.Models
     public Shape(int edges){
       NumberOfEdges = edges;
     }
-     
-    }
+    
+    public override string ToString(){
+      return $"{this.GetType().Name} {NumberOfEdges} edges";
+    }     
+  }
   }
