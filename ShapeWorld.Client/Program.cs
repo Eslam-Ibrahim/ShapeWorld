@@ -1,5 +1,6 @@
 ﻿using System;
 using ShapeWorld.Domain.Models;
+using ShapeWorld.Domain.Collections;
 
 namespace ShapeWorld.Client
 {
@@ -17,6 +18,8 @@ namespace ShapeWorld.Client
             Console.WriteLine(b.Volume());
             Square c = new Cube (12,5);
             Console.WriteLine(c.Volume());
+            ShapeArray sharr = new ShapeArray();
+            sharr.MyDictionary();
         }
     }
 }
