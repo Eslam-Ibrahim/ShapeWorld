@@ -32,7 +32,9 @@ public class Square : Rectangle {
     public override double Preimeter(){
       return _edgeLenght*4;
     }
-  
+    public new double Volume()
+    {
+      return 1234;
+    }
  }
-
 }

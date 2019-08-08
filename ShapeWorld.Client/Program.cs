@@ -11,11 +11,12 @@ namespace ShapeWorld.Client
         }
 
         static void PlayWithShape(){
-          Shape a = new Square(4);
-          Shape b = new Rectangle(3,4);
-         // a.setEdges(10);
-         // a.setEdges(100);
-          Console.WriteLine(b.Preimeter());
+            Shape a = new Cube(12,10);
+            Console.WriteLine(a.Volume());
+            Cube b = new Cube (12,6);
+            Console.WriteLine(b.Volume());
+            Square c = new Cube (12,5);
+            Console.WriteLine(c.Volume());
         }
     }
 }
